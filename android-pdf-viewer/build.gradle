@@ -12,12 +12,6 @@ android {
         versionName "3.2.0-beta.1"
     }
 
-    packaging {
-        jniLibs {
-            useLegacyPackaging = true
-        }
-    }
-
     publishing {
         singleVariant('release') {
             withSourcesJar()
@@ -28,7 +22,7 @@ android {
 
 dependencies {
     implementation 'androidx.core:core:1.15.0'
-    api 'com.github.TalbotGooday:PdfiumAndroid:1.0.1'
+    api 'io.github.oothp:pdfium-android:1.9.4'
 }
 
 afterEvaluate {
