@@ -24,3 +24,16 @@ dependencies {
     implementation 'androidx.core:core:1.15.0'
     api 'com.github.TalbotGooday:PdfiumAndroid:1.0.1'
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.barteksc'
+                artifactId = 'android-pdf-viewer'
+                version = android.defaultConfig.versionName
+            }
+        }
+    }
+}
